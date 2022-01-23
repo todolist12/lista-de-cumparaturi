@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lista-de-cumparaturi/static/css/main.c3b7994c.css",
+    "main.js": "/lista-de-cumparaturi/static/js/main.e123b769.js",
+    "index.html": "/lista-de-cumparaturi/index.html",
+    "main.c3b7994c.css.map": "/lista-de-cumparaturi/static/css/main.c3b7994c.css.map",
+    "main.e123b769.js.map": "/lista-de-cumparaturi/static/js/main.e123b769.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3b7994c.css",
+    "static/js/main.e123b769.js"
+  ]
+}
