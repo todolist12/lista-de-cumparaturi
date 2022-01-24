@@ -38,7 +38,7 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
         <form onSubmit={onFormSubmit}>
             <input 
                 type="text" 
-                placeholder="Enter a product..." 
+                placeholder="Enter a todo..." 
                 className="task-input"
                 value={input}
                 required

@@ -1,6 +1,8 @@
 import React from 'react';
+import { ReactSortable } from "react-sortablejs";
 
 const TodosList = ({todos, setTodos, setEditTodo}) => {
+    
     const handleDelete = ({id}) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     }
@@ -22,13 +24,17 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
     }
 
     return (
-        <div>
+        <ReactSortable 
+        list={todos} 
+        setList={setTodos}
+        animation={300}
+        >
             {todos.map((todo) => (
-                <li className="list-item" key = {todo.id}>
+                <div className="list-item drag" key = {todo.id}>
                     <input 
                         type="text" 
                         value = {todo.title} 
-                        className = {`list ${todo.completed ? "complete" : ""}`}
+                        className = {`list drag ${todo.completed ? "complete" : ""}`}
                         onChange={(event) => event.preventDefault()}
                     />
                     <div>
@@ -42,11 +48,11 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
                             <i className="fa fa-trash"></i>
                         </button>
                     </div>
-                </li>
+                </div>
             )
 
             )}
-        </div>
+        </ReactSortable>
     );
 };
 
